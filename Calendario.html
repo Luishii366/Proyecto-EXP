@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Calendario de Conquistadores</title>
+</head>
+<body>
+  <div class="overlay" id="overlay">
+    <div class="modal">
+      <!-- Modal para agregar recordatorio -->
+      <div class="reminder-modal" id="reminderModal">
+        <div class="reminder-content">
+          <h3>Agregar recordatorio</h3>
+          <p id="selectedDayDisplay"></p>
+          <textarea id="reminderText" placeholder="Escribe tu recordatorio..."></textarea>
+          <div class="reminder-buttons">
+            <button onclick="saveReminder()">Guardar</button>
+            <button onclick="closeReminderModal()">Cancelar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logo -->
+      <img src="Conquistadores.png" alt="Logo" class="logo" />
+
+      <!-- Encabezado -->
+      <header>
+        <h1>Iglesia Adventista Conquistadores</h1>
+        <select id="monthSelector"></select>
+      </header>
+
+      <!-- Calendario -->
+      <div class="calendar" id="calendar"></div>
+
+      <!-- Botón para cerrar -->
+      <button class="close-btn" onclick="closeModal()">Cerrar</button>
+
+      <!-- Reloj -->
+      <div id="clock" class="clock"></div> 
+    </div>
+  </div>
+
+  <!-- Pie de página personalizado -->
+  <footer style="text-align: center; padding: 20px; font-size: 0.9rem; color: #333;">
+    Hecho con 💻 por <strong>www.ConquitadoresClub.com</strong> – Proyecto de calendario interactivo
+  </footer>
+
+  <script src="calendario.js"></script>
+</body>
+</html>
